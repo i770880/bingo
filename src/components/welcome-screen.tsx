@@ -7,7 +7,7 @@ const exampleMessages = [
   },
   {
     heading: '🙌 获取更好的答案',
-    message: '销量最高的 3 种宠物吸尘器有哪些优点和缺点?'
+    message: 'https://nbing.eu.org NewBing测试域'
   },
   {
     heading: '🎨 获得创意灵感',
