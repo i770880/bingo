@@ -41,8 +41,43 @@ export function createChunkDecoder() {
   }
 }
 
+function generateRandomString(length: number): string {
+    const charset = "ABCDEF1234567890";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+        result += charset[Math.floor(Math.random() * charset.length)];
+    }
+    return result;
+}
+
+const MUID_ADDRESSES: string[] = [
+    "074AD7F106536BC6392FC4C907CA6AEA",
+    "019546D2D9086B1C238C555FD84B6A2A",
+    "226B78B3878768AE2C6A6B3E864069FA",
+    "1BD4F74902356D8C047AE4C403F26C19",
+    "2BA6A324A2FC66D834B4B0A9A34F6722",
+    "22897C804CF66A462F436F0D4DB56B13",
+    "3B06D20557436C4D1D98C18856F06DC9",
+    "0D0604C3DD7469723A9B174EDC3768CD",
+    "3FE6DC08443C6B280FFBCF8545FB6AFA",
+    // ...
+    "06FCC9A5B8C26DD20FBEDA3CB9C56CFB",
+    "38436E625858684411327DFB595F69B2",
+    "0DF624B60F646DE8128F372F0ED36C4A",
+    // 添加更多的IP地址
+];
+
+function getRandomMUID(): string {
+    const IPSTR = MUID_ADDRESSES[Math.floor(Math.random() * MUID_ADDRESSES.length)];
+    const trimmedIPStr = IPSTR.slice(0, IPSTR.length - 2);
+    const randomString = generateRandomString(2);
+    const USER_MUID = trimmedIPStr + randomString;
+    return USER_MUID;
+}
+
 export function muid() {
-  return md5(new imei().random()).toUpperCase()
+//  return md5(new imei().random()).toUpperCase()
+    return getRandomMUID()
 }
 
 export function random(start: number, end: number) {
