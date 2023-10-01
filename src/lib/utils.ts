@@ -68,7 +68,9 @@ const MUID_ADDRESSES: string[] = [
 ];
 
 function getRandomMUID(): string {
-    const IPSTR = MUID_ADDRESSES[Math.floor(Math.random() * MUID_ADDRESSES.length)];
+    const timestamp = Date.now();
+    const randomIndex = Math.floor(Math.random() * MUID_ADDRESSES.length * timestamp);
+    const IPSTR = MUID_ADDRESSES[randomIndex % MUID_ADDRESSES.length];
     const trimmedIPStr = IPSTR.slice(0, IPSTR.length - 2);
     const randomString = generateRandomString(2);
     const USER_MUID = trimmedIPStr + randomString;
