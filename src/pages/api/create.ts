@@ -44,7 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }))
         return
       }
-      await sleep(10000)
+      await sleep(3000)
       headers['x-forwarded-for'] = ''
     } while(count++ < 10)
     res.end(JSON.stringify({
