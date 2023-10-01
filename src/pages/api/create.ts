@@ -11,6 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const headers = createHeaders(req.cookies)
     do {
       headers['x-forwarded-for'] = headers['x-forwarded-for'] || randomIP()
+      console.log('Header:',headers)
       const endpoints = [req.headers['x-endpoint'], ...(process.env.ENDPOINT || '').split(','), 'www.bing.com'].filter(Boolean)
       const endpoint = endpoints[count % endpoints.length]
       const { conversationId } = req.query
