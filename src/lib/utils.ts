@@ -104,7 +104,7 @@ export const lookupPromise = async function (domain: string) {
   })
 }
 
-export const defaultUID = 'xxx'
+export const defaultUID = '1Y4THGMydF_ZwQrZ2zaPy1CohVQCouYOPdaRGazWlmCbarbWWeSh2aHGkAHqp5SUNz6dUaJGYbIIBFKH5JGXw9moMh_StP5ZFrK19gs5TKasPQzo-37m29JWPNhEt3azVafN-2wd_eGeu93fSbSRu64y7tZIlpQTruj9FsoaRlkpy6GTPB-tWoOLO9TRWChfjY-FsEltuakH_S9L0yrVESw'
 
 export function parseHeadersFromCurl(content: string) {
   const re = /-H '([^:]+):\s*([^']+)/mg
