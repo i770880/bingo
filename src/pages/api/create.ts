@@ -8,8 +8,8 @@ import { sleep } from '@/lib/bots/bing/utils'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     let count = 0
-    const headers = createHeaders(req.cookies)
     do {
+      const headers = createHeaders(req.cookies)
       headers['x-forwarded-for'] = headers['x-forwarded-for'] || randomIP()
       console.log('Header:',headers)
       const endpoints = [req.headers['x-endpoint'], ...(process.env.ENDPOINT || '').split(','), 'www.bing.com'].filter(Boolean)
