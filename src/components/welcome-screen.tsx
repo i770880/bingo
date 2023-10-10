@@ -7,7 +7,7 @@ const exampleMessages = [
   },
   {
     heading: '🙌 获取更好的答案',
-    message: 'https://nbing.eu.org NewBing测试域'
+    message: '总结https://nbing.eu.org网站内容并画出该网站拓扑图'
   },
   {
     heading: '🎨 获得创意灵感',
