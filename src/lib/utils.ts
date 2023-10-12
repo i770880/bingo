@@ -116,7 +116,7 @@ export const lookupPromise = async function (domain: string) {
   })
 }
 
-export const defaultUID = '12O9dE8L2BA_onNDr8w0BBXXvXIMlyPzyKUSlksFVjdfbsHo-cTBvXCH43iONoFkVJ36v9N4uMJSQNi5IBpyvNkiMkw78w_Fb5IYgeL_2H_iV0ILKcqzYA5i7EGT2wTeYUEj8QFJ252knVUVBE3kHGDgf-QuAgqWxDZu27--NkCM7fynisKiYKh1CAaaekkO1GOgnrqgnO6TeIvQgI83s0j9dMphr3Uqu3ZEeWk9z7LE'
+export const defaultUID = 'xxx'
 
 export function parseHeadersFromCurl(content: string) {
   const re = /-H '([^:]+):\s*([^']+)/mg
